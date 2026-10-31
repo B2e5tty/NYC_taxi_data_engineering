@@ -1,0 +1,17 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+
+logs/*
+config/*
+plugins/*
+
+include/data/raw/*
+include/data/bronze/*
+include/data/silver/*
+include/data/gold/*
+
+.ipynb_checkpoints/
+.idea/
+.vscode/
