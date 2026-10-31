@@ -1,0 +1,72 @@
+{"timestamp":"2026-10-31T20:04:06.588576Z","level":"info","event":"::group::Pre Execute","logger":"task","filename":"task_runner.py","lineno":1926}
+{"timestamp":"2026-10-31T20:04:06.607324Z","level":"info","event":"DAG bundles loaded: dags-folder","try_number":2,"dag_id":"nyc_taxi_end_to_end_pipeline","ti_id":"01a1938f-f00d-7e41-a9dd-f2b418e16e80","task_id":"ingest_data","run_id":"manual__2026-10-31T19:52:28.639779+00:00","map_index":-1,"logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-10-31T20:04:06.609958Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/nyc_taxi_pipeline.py","try_number":2,"dag_id":"nyc_taxi_end_to_end_pipeline","ti_id":"01a1938f-f00d-7e41-a9dd-f2b418e16e80","task_id":"ingest_data","run_id":"manual__2026-10-31T19:52:28.639779+00:00","map_index":-1,"logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-10-31T20:04:06.693688Z","level":"info","event":"::endgroup::","try_number":2,"dag_id":"nyc_taxi_end_to_end_pipeline","ti_id":"01a1938f-f00d-7e41-a9dd-f2b418e16e80","task_id":"ingest_data","run_id":"manual__2026-10-31T19:52:28.639779+00:00","map_index":-1,"logger":"task","filename":"task_runner.py","lineno":1727}
+{"timestamp":"2026-10-31T20:04:06.695180Z","level":"info","event":"Starting Spark job: ingest_taxi_data.py","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:08.889241Z","level":"info","event":"Already downloaded: /opt/airflow/include/data/raw/yellow_tripdata_2025-01.parquet","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:08.891250Z","level":"info","event":"Already downloaded: /opt/airflow/include/data/raw/taxi_zone_lookup.csv","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:08.965811Z","level":"error","event":"26/10/31 20:04:08 INFO SparkContext: Running Spark version 3.5.6","logger":"task.stderr"}
+{"timestamp":"2026-10-31T20:04:08.967828Z","level":"error","event":"26/10/31 20:04:08 INFO SparkContext: OS info Linux, 6.6.87.2-microsoft-standard-WSL2, amd64","logger":"task.stderr"}
+{"timestamp":"2026-10-31T20:04:08.968443Z","level":"error","event":"26/10/31 20:04:08 INFO SparkContext: Java version 17.0.21","logger":"task.stderr"}
+{"timestamp":"2026-10-31T20:04:09.014281Z","level":"error","event":"26/10/31 20:04:09 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable","logger":"task.stderr"}
+{"timestamp":"2026-10-31T20:04:14.216111Z","level":"info","event":"Trip Data","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:14.220056Z","level":"info","event":"root","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:14.221115Z","level":"info","event":" |-- VendorID: integer (nullable = true)","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:14.222332Z","level":"info","event":" |-- tpep_pickup_datetime: timestamp_ntz (nullable = true)","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:14.225649Z","level":"info","event":" |-- tpep_dropoff_datetime: timestamp_ntz (nullable = true)","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:14.226202Z","level":"info","event":" |-- passenger_count: long (nullable = true)","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:14.226774Z","level":"info","event":" |-- trip_distance: double (nullable = true)","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:14.227435Z","level":"info","event":" |-- RatecodeID: long (nullable = true)","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:14.228141Z","level":"info","event":" |-- store_and_fwd_flag: string (nullable = true)","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:14.228680Z","level":"info","event":" |-- PULocationID: integer (nullable = true)","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:14.229308Z","level":"info","event":" |-- DOLocationID: integer (nullable = true)","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:14.229812Z","level":"info","event":" |-- payment_type: long (nullable = true)","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:14.230490Z","level":"info","event":" |-- fare_amount: double (nullable = true)","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:14.231326Z","level":"info","event":" |-- extra: double (nullable = true)","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:14.231951Z","level":"info","event":" |-- mta_tax: double (nullable = true)","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:14.232595Z","level":"info","event":" |-- tip_amount: double (nullable = true)","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:14.233169Z","level":"info","event":" |-- tolls_amount: double (nullable = true)","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:14.233833Z","level":"info","event":" |-- improvement_surcharge: double (nullable = true)","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:14.234366Z","level":"info","event":" |-- total_amount: double (nullable = true)","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:14.235048Z","level":"info","event":" |-- congestion_surcharge: double (nullable = true)","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:14.235836Z","level":"info","event":" |-- Airport_fee: double (nullable = true)","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:14.236484Z","level":"info","event":" |-- cbd_congestion_fee: double (nullable = true)","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:14.237357Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.177624Z","level":"info","event":"+--------+--------------------+---------------------+---------------+-------------+----------+------------------+------------+------------+------------+-----------+-----+-------+----------+------------+---------------------+------------+--------------------+-----------+------------------+","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.178431Z","level":"info","event":"|VendorID|tpep_pickup_datetime|tpep_dropoff_datetime|passenger_count|trip_distance|RatecodeID|store_and_fwd_flag|PULocationID|DOLocationID|payment_type|fare_amount|extra|mta_tax|tip_amount|tolls_amount|improvement_surcharge|total_amount|congestion_surcharge|Airport_fee|cbd_congestion_fee|","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.182780Z","level":"info","event":"+--------+--------------------+---------------------+---------------+-------------+----------+------------------+------------+------------+------------+-----------+-----+-------+----------+------------+---------------------+------------+--------------------+-----------+------------------+","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.183763Z","level":"info","event":"|1       |2025-01-01 00:18:38 |2025-01-01 00:26:59  |1              |1.6          |1         |N                 |229         |237         |1           |10.0       |3.5  |0.5    |3.0       |0.0         |1.0                  |18.0        |2.5                 |0.0        |0.0               |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.185003Z","level":"info","event":"|1       |2025-01-01 00:32:40 |2025-01-01 00:35:13  |1              |0.5          |1         |N                 |236         |237         |1           |5.1        |3.5  |0.5    |2.02      |0.0         |1.0                  |12.12       |2.5                 |0.0        |0.0               |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.185619Z","level":"info","event":"|1       |2025-01-01 00:44:04 |2025-01-01 00:46:01  |1              |0.6          |1         |N                 |141         |141         |1           |5.1        |3.5  |0.5    |2.0       |0.0         |1.0                  |12.1        |2.5                 |0.0        |0.0               |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.186226Z","level":"info","event":"|2       |2025-01-01 00:14:27 |2025-01-01 00:20:01  |3              |0.52         |1         |N                 |244         |244         |2           |7.2        |1.0  |0.5    |0.0       |0.0         |1.0                  |9.7         |0.0                 |0.0        |0.0               |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.186923Z","level":"info","event":"|2       |2025-01-01 00:21:34 |2025-01-01 00:25:06  |3              |0.66         |1         |N                 |244         |116         |2           |5.8        |1.0  |0.5    |0.0       |0.0         |1.0                  |8.3         |0.0                 |0.0        |0.0               |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.187406Z","level":"info","event":"+--------+--------------------+---------------------+---------------+-------------+----------+------------------+------------+------------+------------+-----------+-----+-------+----------+------------+---------------------+------------+--------------------+-----------+------------------+","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.187952Z","level":"info","event":"only showing top 5 rows","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.188486Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.691875Z","level":"info","event":"Trip record count: 3475226","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.692556Z","level":"info","event":"Zones Data","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.694896Z","level":"info","event":"root","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.695546Z","level":"info","event":" |-- LocationID: integer (nullable = true)","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.696141Z","level":"info","event":" |-- Borough: string (nullable = true)","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.697351Z","level":"info","event":" |-- Zone: string (nullable = true)","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.698040Z","level":"info","event":" |-- service_zone: string (nullable = true)","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.698636Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.888709Z","level":"info","event":"+----------+-------------+-----------------------+------------+","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.890732Z","level":"info","event":"|LocationID|Borough      |Zone                   |service_zone|","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.891423Z","level":"info","event":"+----------+-------------+-----------------------+------------+","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.892032Z","level":"info","event":"|1         |EWR          |Newark Airport         |EWR         |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.892603Z","level":"info","event":"|2         |Queens       |Jamaica Bay            |Boro Zone   |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.893219Z","level":"info","event":"|3         |Bronx        |Allerton/Pelham Gardens|Boro Zone   |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.893794Z","level":"info","event":"|4         |Manhattan    |Alphabet City          |Yellow Zone |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.894309Z","level":"info","event":"|5         |Staten Island|Arden Heights          |Boro Zone   |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.894804Z","level":"info","event":"+----------+-------------+-----------------------+------------+","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.895483Z","level":"info","event":"only showing top 5 rows","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:15.896072Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:16.059616Z","level":"info","event":"Zones recoreded: 265","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:25.850718Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:25.852245Z","level":"info","event":"Bronze ingestion completed successfully.","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:26.520843Z","level":"info","event":"Completed Spark job: ingest_taxi_data.py","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:04:26.521209Z","level":"info","event":"Done. Returned value was: 0","try_number":2,"dag_id":"nyc_taxi_end_to_end_pipeline","ti_id":"01a1938f-f00d-7e41-a9dd-f2b418e16e80","task_id":"ingest_data","run_id":"manual__2026-10-31T19:52:28.639779+00:00","map_index":-1,"logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":233}
+{"timestamp":"2026-10-31T20:04:26.522289Z","level":"info","event":"::group::Post Execute","try_number":2,"dag_id":"nyc_taxi_end_to_end_pipeline","ti_id":"01a1938f-f00d-7e41-a9dd-f2b418e16e80","task_id":"ingest_data","run_id":"manual__2026-10-31T19:52:28.639779+00:00","map_index":-1,"logger":"task","filename":"task_runner.py","lineno":1288}
+{"timestamp":"2026-10-31T20:04:26.523621Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('01a1938f-f00d-7e41-a9dd-f2b418e16e80'), task_id='ingest_data', dag_id='nyc_taxi_end_to_end_pipeline', run_id='manual__2026-10-31T19:52:28.639779+00:00', try_number=2, dag_version_id=UUID('01a19384-994a-76d1-9754-129f91784dcd'), map_index=-1, hostname='140a82c35126', context_carrier={'traceparent': '00-981d1ade868a2c797d7cfaa37ee78ec3-c1d972ac3682ba91-01'}, task=<Task(_PythonDecoratedOperator): ingest_data>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=3, start_date=datetime.datetime(2026, 10, 31, 20, 4, 6, 597392, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None, sentry_integration='')","try_number":2,"dag_id":"nyc_taxi_end_to_end_pipeline","ti_id":"01a1938f-f00d-7e41-a9dd-f2b418e16e80","task_id":"ingest_data","run_id":"manual__2026-10-31T19:52:28.639779+00:00","map_index":-1,"logger":"task","filename":"task_runner.py","lineno":1791}
+{"timestamp":"2026-10-31T20:04:26.574113Z","level":"info","event":"::endgroup::","try_number":2,"dag_id":"nyc_taxi_end_to_end_pipeline","ti_id":"01a1938f-f00d-7e41-a9dd-f2b418e16e80","task_id":"ingest_data","run_id":"manual__2026-10-31T19:52:28.639779+00:00","map_index":-1,"logger":"task","filename":"task_runner.py","lineno":1896}

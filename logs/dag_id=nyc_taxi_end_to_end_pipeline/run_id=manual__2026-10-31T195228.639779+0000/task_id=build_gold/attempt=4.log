@@ -1,0 +1,93 @@
+{"timestamp":"2026-10-31T20:02:32.423840Z","level":"info","event":"::group::Pre Execute","logger":"task","filename":"task_runner.py","lineno":1926}
+{"timestamp":"2026-10-31T20:02:32.448802Z","level":"info","event":"DAG bundles loaded: dags-folder","dag_id":"nyc_taxi_end_to_end_pipeline","map_index":-1,"ti_id":"01a1938e-7df8-7f66-b394-1ca16b8e88f2","task_id":"build_gold","try_number":4,"run_id":"manual__2026-10-31T19:52:28.639779+00:00","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-10-31T20:02:32.451533Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/nyc_taxi_pipeline.py","dag_id":"nyc_taxi_end_to_end_pipeline","map_index":-1,"ti_id":"01a1938e-7df8-7f66-b394-1ca16b8e88f2","task_id":"build_gold","try_number":4,"run_id":"manual__2026-10-31T19:52:28.639779+00:00","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-10-31T20:02:32.511312Z","level":"info","event":"::endgroup::","dag_id":"nyc_taxi_end_to_end_pipeline","map_index":-1,"ti_id":"01a1938e-7df8-7f66-b394-1ca16b8e88f2","task_id":"build_gold","try_number":4,"run_id":"manual__2026-10-31T19:52:28.639779+00:00","logger":"task","filename":"task_runner.py","lineno":1727}
+{"timestamp":"2026-10-31T20:02:32.513137Z","level":"info","event":"Starting Spark job: gold_layer.py","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:35.003065Z","level":"error","event":"26/10/31 20:02:35 INFO SparkContext: Running Spark version 3.5.6","logger":"task.stderr"}
+{"timestamp":"2026-10-31T20:02:35.004975Z","level":"error","event":"26/10/31 20:02:35 INFO SparkContext: OS info Linux, 6.6.87.2-microsoft-standard-WSL2, amd64","logger":"task.stderr"}
+{"timestamp":"2026-10-31T20:02:35.005650Z","level":"error","event":"26/10/31 20:02:35 INFO SparkContext: Java version 17.0.21","logger":"task.stderr"}
+{"timestamp":"2026-10-31T20:02:35.055616Z","level":"error","event":"26/10/31 20:02:35 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable","logger":"task.stderr"}
+{"timestamp":"2026-10-31T20:02:39.994818Z","level":"info","event":"Silver record count: 3326505","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:43.079815Z","level":"info","event":"Saved dataset:  {'daily_summary'}","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:44.893245Z","level":"info","event":"Saved dataset:  {'hourly_summary'}","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:47.136027Z","level":"info","event":"Saved dataset:  {'payment_analysis'}","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:47.136709Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:47.137812Z","level":"info","event":"========== Daily Summary ==========","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:48.860337Z","level":"info","event":"+-----------+-----------+-------------+----------+----------------+-----------------+------------+---------+----------------+","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:48.861029Z","level":"info","event":"|pickup_date|total_trips|total_revenue|total_fare|avg_total_amount|avg_trip_distance|avg_duration|total_tip|total_passengers|","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:48.861626Z","level":"info","event":"+-----------+-----------+-------------+----------+----------------+-----------------+------------+---------+----------------+","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:48.862552Z","level":"info","event":"|2025-01-09 |114668     |3083922.1    |2035897.14|26.89           |5.3              |14.86       |368410.34|126918          |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:48.866461Z","level":"info","event":"|2025-01-14 |116931     |3113053.71   |2049125.02|26.62           |6.74             |14.61       |368954.18|123998          |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:48.867155Z","level":"info","event":"|2025-01-18 |114026     |2829033.91   |1928740.38|24.81           |3.72             |13.82       |309170.07|131641          |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:48.867665Z","level":"info","event":"|2025-01-17 |115400     |3153681.5    |2109473.97|27.33           |7.35             |15.46       |358217.11|125603          |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:48.868144Z","level":"info","event":"|2025-01-13 |96687      |2661466.32   |1758925.69|27.53           |5.64             |14.58       |319046.4 |106277          |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:48.869049Z","level":"info","event":"|2024-12-31 |21         |589.17       |401.6     |28.06           |3.66             |16.81       |85.07    |40              |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:48.870685Z","level":"info","event":"|2025-01-10 |107460     |2928941.6    |1940283.48|27.26           |5.06             |14.8        |345189.79|123991          |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:48.871521Z","level":"info","event":"|2025-01-08 |109595     |2885102.09   |1894788.54|26.33           |2.9              |14.37       |342475.81|120444          |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:48.872341Z","level":"info","event":"|2025-01-19 |110592     |2739704.44   |1913871.71|24.77           |5.76             |12.66       |262865.15|109954          |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:48.872996Z","level":"info","event":"|2025-01-12 |98013      |2676544.96   |1827539.63|27.31           |8.19             |13.43       |307036.98|111629          |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:48.873648Z","level":"info","event":"+-----------+-----------+-------------+----------+----------------+-----------------+------------+---------+----------------+","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:48.874327Z","level":"info","event":"only showing top 10 rows","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:48.874858Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:48.875466Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:48.876055Z","level":"info","event":"========== Hourly Demand ==========","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:49.524472Z","level":"info","event":"+-----------+-----------+-------------+-------------------+----------------+","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:49.526492Z","level":"info","event":"|pickup_hour|total_trips|total_revenue|average_trip_amount|average_distance|","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:49.528006Z","level":"info","event":"+-----------+-----------+-------------+-------------------+----------------+","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:49.531990Z","level":"info","event":"|0          |87708      |2411249.14   |27.49              |4.61            |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:49.535123Z","level":"info","event":"|1          |60476      |1531671.62   |25.33              |4.64            |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:49.537940Z","level":"info","event":"|2          |40971      |995297.13    |24.29              |3.12            |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:49.539002Z","level":"info","event":"|3          |26218      |663883.67    |25.32              |3.34            |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:49.539741Z","level":"info","event":"|4          |18499      |574059.92    |31.03              |4.94            |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:49.540365Z","level":"info","event":"|5          |21004      |734054.02    |34.95              |37.34           |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:49.540936Z","level":"info","event":"|6          |47313      |1379698.55   |29.16              |22.39           |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:49.541601Z","level":"info","event":"|7          |97820      |2619001.87   |26.77              |7.57            |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:49.542257Z","level":"info","event":"|8          |135205     |3423569.66   |25.32              |6.61            |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:49.542835Z","level":"info","event":"|9          |138676     |3527570.82   |25.44              |7.98            |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:49.543446Z","level":"info","event":"+-----------+-----------+-------------+-------------------+----------------+","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:49.543947Z","level":"info","event":"only showing top 10 rows","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:49.544422Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:49.544960Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:49.545498Z","level":"info","event":"========== Pickup Zone Analysis ==========","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:50.860676Z","level":"info","event":"+--------------+----------------------------+------------+-----------------------+---------------------+","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:50.862717Z","level":"info","event":"|pickup_borough|pickup_zone                 |pickup_trips|associated_trip_revenue|average_trip_distance|","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:50.866442Z","level":"info","event":"+--------------+----------------------------+------------+-----------------------+---------------------+","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:50.867105Z","level":"info","event":"|Manhattan     |Midtown Center              |163959      |3932660.14             |2.17                 |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:50.867754Z","level":"info","event":"|Manhattan     |Upper East Side South       |159687      |3180343.79             |1.68                 |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:50.868344Z","level":"info","event":"|Manhattan     |Upper East Side North       |151538      |3082707.38             |2.47                 |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:50.869113Z","level":"info","event":"|Queens        |JFK Airport                 |137320      |1.104360945E7          |15.36                |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:50.869781Z","level":"info","event":"|Manhattan     |Times Sq/Theatre District   |119978      |3235775.71             |2.79                 |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:50.870334Z","level":"info","event":"|Manhattan     |Penn Station/Madison Sq West|115356      |2770969.45             |3.11                 |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:50.871082Z","level":"info","event":"|Manhattan     |Midtown East                |114360      |2704185.74             |2.17                 |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:50.871743Z","level":"info","event":"|Manhattan     |Lincoln Square East         |107206      |2333841.85             |2.7                  |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:50.873319Z","level":"info","event":"|Manhattan     |Upper West Side South       |93242       |1980470.11             |5.0                  |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:50.874035Z","level":"info","event":"|Manhattan     |Midtown North               |92775       |2254641.5              |2.27                 |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:50.875139Z","level":"info","event":"+--------------+----------------------------+------------+-----------------------+---------------------+","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:50.876465Z","level":"info","event":"only showing top 10 rows","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:50.877505Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:50.878025Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:50.878637Z","level":"info","event":"========== Payment Analysis ==========","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:51.849377Z","level":"info","event":"+------------+--------------+-----------+-------------+-------------+-------------+-------------------+","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:51.850812Z","level":"info","event":"|payment_type|payment_method|total_trips|total_revenue|total_fare   |total_tips   |average_trip_amount|","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:51.851512Z","level":"info","event":"+------------+--------------+-----------+-------------+-------------+-------------+-------------------+","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:51.852064Z","level":"info","event":"|1           |Credit Card   |2442223    |6.857397387E7|4.397724956E7|1.002867344E7|28.08              |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:51.852616Z","level":"info","event":"|0           |Not Recorded  |455044     |1.05395531E7 |8265402.59   |244286.91    |23.16              |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:51.853236Z","level":"info","event":"|2           |Cash          |375024     |8858587.8    |6775513.28   |98.5         |23.62              |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:51.853854Z","level":"info","event":"|4           |Dispute       |38783      |1923166.37   |1693007.4    |450.56       |49.59              |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:51.854855Z","level":"info","event":"|3           |No Charge     |15431      |344708.8     |262148.12    |81.7         |22.34              |","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:51.855325Z","level":"info","event":"+------------+--------------+-----------+-------------+-------------+-------------+-------------------+","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:51.855920Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:51.856732Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:51.857540Z","level":"info","event":"========== GOLD LAYER VALIDATION ==========","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:52.144433Z","level":"info","event":"Silver records: 3326505","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:53.222821Z","level":"info","event":"Daily summary trips: 3326505","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:53.675946Z","level":"info","event":"Hourly demand trips: 3326505","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:54.548137Z","level":"info","event":"Pickup zone trips: 3326505","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:55.114952Z","level":"info","event":"Payment analysis trips: 3326505","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:55.116302Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:55.117249Z","level":"info","event":"Gold layer completed successfully.","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:55.438668Z","level":"info","event":"Completed Spark job: gold_layer.py","logger":"task.stdout"}
+{"timestamp":"2026-10-31T20:02:55.438630Z","level":"info","event":"Done. Returned value was: 0","dag_id":"nyc_taxi_end_to_end_pipeline","map_index":-1,"ti_id":"01a1938e-7df8-7f66-b394-1ca16b8e88f2","task_id":"build_gold","try_number":4,"run_id":"manual__2026-10-31T19:52:28.639779+00:00","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":233}
+{"timestamp":"2026-10-31T20:02:55.438796Z","level":"info","event":"::group::Post Execute","dag_id":"nyc_taxi_end_to_end_pipeline","map_index":-1,"ti_id":"01a1938e-7df8-7f66-b394-1ca16b8e88f2","task_id":"build_gold","try_number":4,"run_id":"manual__2026-10-31T19:52:28.639779+00:00","logger":"task","filename":"task_runner.py","lineno":1288}
+{"timestamp":"2026-10-31T20:02:55.438987Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('01a1938e-7df8-7f66-b394-1ca16b8e88f2'), task_id='build_gold', dag_id='nyc_taxi_end_to_end_pipeline', run_id='manual__2026-10-31T19:52:28.639779+00:00', try_number=4, dag_version_id=UUID('01a19384-994a-76d1-9754-129f91784dcd'), map_index=-1, hostname='140a82c35126', context_carrier={'traceparent': '00-a562809b436bf6329e593bc967ebd364-bbe92764df9213f4-01'}, task=<Task(_PythonDecoratedOperator): build_gold>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=5, start_date=datetime.datetime(2026, 10, 31, 20, 2, 32, 436170, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None, sentry_integration='')","dag_id":"nyc_taxi_end_to_end_pipeline","map_index":-1,"ti_id":"01a1938e-7df8-7f66-b394-1ca16b8e88f2","task_id":"build_gold","try_number":4,"run_id":"manual__2026-10-31T19:52:28.639779+00:00","logger":"task","filename":"task_runner.py","lineno":1791}
+{"timestamp":"2026-10-31T20:02:55.481986Z","level":"info","event":"::endgroup::","dag_id":"nyc_taxi_end_to_end_pipeline","map_index":-1,"ti_id":"01a1938e-7df8-7f66-b394-1ca16b8e88f2","task_id":"build_gold","try_number":4,"run_id":"manual__2026-10-31T19:52:28.639779+00:00","logger":"task","filename":"task_runner.py","lineno":1896}

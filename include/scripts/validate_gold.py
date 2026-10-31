@@ -20,10 +20,8 @@ silver_revenue = (silver.agg(F.sum("total_amount")).first()[0] or 0)
 
 # Read Gold datasets
 gold_datasets = {
-    "daily_trip_summary": ("total_trips", "total_revenue"),
-    "hourly_demand": ("total_trips", "total_revenue"),
-    "pickup_zone_analysis": ("pickup_trips", "associated_trip_revenue"),
-    "dropoff_zone_analysis": ("dropoff_trips", "associated_trip_revenue"),
+    "daily_summary": ("total_trips", "total_revenue"),
+    "hourly_summary": ("total_trips", "total_revenue"),
     "payment_analysis": ("total_trips", "total_revenue"),
 }
 

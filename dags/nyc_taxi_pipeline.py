@@ -47,7 +47,7 @@ def nyc_taxi_pipeline():
     # Task 3: Silver to Gold
     @task
     def build_gold():
-        return run_spark_job("build_gold_layer.py")
+        return run_spark_job("gold_layer.py")
 
     # Task 4: Validate Gold
     @task
